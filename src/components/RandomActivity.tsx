@@ -37,7 +37,7 @@ export default function RandomActivity() {
                 Get your Activity
                 </button>
                 <div className="mt-2" />
-                {isCached && <p>Come back in an hour to find more stuff to do wtih your life</p>}
+                {isCached && <p>Come back in an hour to find more stuff to do with your life</p>}
                 <div className="mt-2" />
             </div>
             {loading && <p>Loading...</p>}

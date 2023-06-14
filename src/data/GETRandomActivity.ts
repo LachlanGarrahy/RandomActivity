@@ -1,7 +1,6 @@
 import { Activity } from "../types";
 
 export async function GETRandomActivity(url: string) {
-    localStorage.removeItem("activity")
     const cachedData = localStorage.getItem("activity");
     if(cachedData){
         return JSON.parse(cachedData) as Activity;
@@ -11,6 +10,6 @@ export async function GETRandomActivity(url: string) {
     localStorage.setItem("activity", JSON.stringify(data));
     setTimeout(() => {
         localStorage.removeItem("activity");
-    }, 1000);
+    }, 1000 * 60 * 60);
     return data;
 }
